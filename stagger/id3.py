@@ -335,11 +335,9 @@ class SYTC(Frame):
     _bozo = True
 
 @frameclass
-class USLT(Frame):
-    "Unsynchronised lyric/text transcription"
-    _framespec = (EncodingSpec("encoding"), LanguageSpec("lang"),
-                  EncodedStringSpec("desc"), EncodedFullTextSpec("text"))
-    _allow_duplicates = True
+class USLT(TextFrame):
+    "Lyrics"
+    _allow_duplicates = False
     
 @frameclass
 class SYLT(Frame):
